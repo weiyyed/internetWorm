@@ -9,7 +9,7 @@ LOGIN_TYPE=2
 
 # 生成sql配置信息
 PC_FILE="pc_sy.51gxc.com_1031_2019-12-06.txt"
-M_FILE="m_sy.51gxc.com_1031_2019-12-06.txt"
+APP_FILE="m_sy.51gxc.com_1031_2019-12-06.txt"
 #mysql
 MYCAT_HOST="192.168.6.69"
 MYCAT_USERNAME="hap"
