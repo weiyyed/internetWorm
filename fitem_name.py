@@ -30,28 +30,9 @@ def gen_sql(filename):
     for tup in funcs:
         funcode, name = tup
         name=name.strip()
-        if "hse" in funcode.lower():
-            module="HSE"
-        elif "cbs" in funcode.lower():
-            module = "CBS"
-        elif "csc" in funcode.lower():
-            module = "CSC"
-        elif "sy" in funcode.lower():
-            module = "SY"
-        elif "trn" in funcode.lower():
-            module = "TRN"
-        elif "pub" in funcode.lower():
-            module = "PUB"
-        elif "eam" in funcode.lower():
-            module = "EAM"
-        elif "hsm" in funcode.lower():
-            module = "HSM"
-        elif "insp" in funcode.lower():
-            module = "INSP"
-        elif "hsm" in funcode.lower():
-            module = "HSM"
-        elif "phd" in funcode.lower():
-            module = "PHD"
+        for fc in ["collect","insp","cbs","hsm","pub","trn","phd","csc","hse","eam","wtask","manager","msg"]:
+            if fc in funcode.lower():
+                module=fc
         pre1 = "\necho {}-{}>>./{}.txt\n".format(funcode, name,module)
         pre2 = r'mysql -h{} -u{} -p{} -P{} -Ne "use {};'.format(MYCAT_HOST, MYCAT_USERNAME, MYCAT_PASSPORD, MYCAT_PORT,
                                                                MYCAT_DATABASE)
