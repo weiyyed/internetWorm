@@ -7,7 +7,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 
-chandao_url="8"
+chandao_url=""
 while chandao_url=="":
     chandao_url = input("input chandao url or project id:")
 try:
