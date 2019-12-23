@@ -1,4 +1,4 @@
-# v3保存菜单功能按钮
+# 一键生成菜单功能按钮
 import datetime,json,re,time,requests,os
 from json import JSONDecodeError
 from selenium import webdriver

@@ -61,8 +61,6 @@ with open("./unresolved.txt","w+",encoding="utf-8") as f:
     for p,vs in deal_dic.items():
         f.write("@{}\n".format(p))
         for n in range(len(vs)):
-            if p=="刘冠宁":
-                print()
             f.write("{}:{}".format(vs[n][0],vs[n][1]))
             f.write("\n")
         f.write("\n")
